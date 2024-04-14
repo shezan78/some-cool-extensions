@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "My Extension",
+  "version": "1.0",
+  "description": "This is a simple Chrome extension for Roblox",
+  "permissions": [
+    "https://www.roblox.com/*"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "grey_16x16.png",
+      "48": "grey_48x48.png",
+      "128": "grey_128x128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.roblox.com/games/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
